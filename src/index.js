@@ -18,8 +18,9 @@ module.exports = function solveEquation(equation) {
 
    var x1 = (-b+D)/(2*a);
     var x2 = (-b-D)/(2*a);
+if (x1>x2) result.push(x2,x1);
+else result.push(x1, x2);
 
-   result.push(x1,x2);
-   result.sort(a,b=>a-b);
+
    return result;
 }
